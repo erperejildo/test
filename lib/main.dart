@@ -35,8 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    GPG().signIn();
-
     checkUser();
     super.initState();
   }
