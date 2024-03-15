@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Google Play game services IDs. Save this file as res/values/games-ids.xml in your project.-->
+<resources>
+  <!--app_id-->
+  <string name="app_id" translatable="false">5200545345</string>
+  <!--package_name-->
+  <string name="package_name" translatable="false">com.drodriguez.time_tap</string>
+  <!--leaderboard Ranking-->
+  <string name="leaderboard_ranking" translatable="false">CgkI-9Wn2O0VEAIQBQ</string>
+</resources>

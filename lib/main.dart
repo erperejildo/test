@@ -39,8 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
-  checkUser() async {
-    logged = await GPG().isSignedIn();
+  checkUser() {
+    setState(() async {
+      logged = await GPG().isSignedIn();
+    });
   }
 
   @override
@@ -52,11 +54,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: logged
-            ? Text('user is logged in')
+            ? const Text('user is logged in')
             : Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('user is not logged in'),
+                  const Text('user is not logged in'),
                   TextButton(
                     onPressed: () async {
                       await GPG().signIn().then((value) {
@@ -65,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         });
                       });
                     },
-                    child: Text('Sign in'),
+                    child: const Text('Sign in'),
                   ),
                 ],
               ),
